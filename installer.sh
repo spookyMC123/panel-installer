@@ -27,7 +27,7 @@ echo -e "${YELLOW}Select an option:${RESET}"
 echo "1) Install pterodactyl (panel +wings with ip on vps or VM)"
 echo "2) Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
 echo "3) Install Skyport-panel(panel + wings ubuntu/debian)"
-echo "4) Install "
+echo "4) Install draco-v1"
 echo -n "Enter your choice: "
 read -r choice
 
@@ -43,12 +43,12 @@ case $choice in
         ;;
     3)
         echo -e "${GREEN}Installing Panel + Wings...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/panel.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
         bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
         ;;
     4)
         echo -e "${GREEN}Installing Node.js...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.js.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
