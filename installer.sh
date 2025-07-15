@@ -28,6 +28,8 @@ echo "1) Install pterodactyl (panel +wings with ip on vps or VM)"
 echo "2) Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
 echo "3) Install Skyport-panel(panel + wings ubuntu/debian)"
 echo "4) Install draco-v1"
+echo "5) coming!"
+echo "more panel are coming soon!!"
 echo -n "Enter your choice: "
 read -r choice
 
