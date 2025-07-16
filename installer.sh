@@ -29,6 +29,8 @@ echo "2) Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debia
 echo "3) Install Skyport-panel(panel + wings ubuntu/debian)"
 echo "4) Install draco-v1"
 echo "5) coming!"
+echo "6) "
+echo "7) puffer panel install (free vps github only)"
 echo "more panel are coming soon!!"
 echo -n "Enter your choice: "
 read -r choice
@@ -49,7 +51,19 @@ case $choice in
         bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
         ;;
     4)
-        echo -e "${GREEN}Installing Node.js...${RESET}"
+        echo -e "${GREEN}Installing draro v1...${RESET}"
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        ;;
+    5)
+        echo -e "${GREEN}Installing draco v2...${RESET}"
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        ;;
+    6)
+        echo -e "${GREEN}Installing draco v3...${RESET}"
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        ;;
+    7)
+        echo -e "${GREEN}Installing Puffer panel...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     *)
