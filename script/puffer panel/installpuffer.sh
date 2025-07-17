@@ -19,6 +19,7 @@ echo -e "${GREEN}==============================${RESET}"
 echo -e "${YELLOW}Select an option:${RESET}"
 echo "1) Install pufferpanel on github"
 echo "2) Install pufferpanel on all vps and codesandbox"
+echo "0) Back to installer"
 echo -n "Enter your choice: "
 read -r choice
 
@@ -32,7 +33,10 @@ case $choice in
         echo -e "${GREEN}Installing vps pufferpanel...${RESET}"
         bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/codesandboxvpspufferpanelinstall.sh)
         ;;
-   
+    0)
+        echo -e "${GREEN}backing to panel-installer...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
+        ;;
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
         exit 1
