@@ -44,7 +44,7 @@ case $choice in
         ;;
     2)
         echo -e "${GREEN}Installing pterodactyl 2...${RESET}"
-        bash <(curl -s https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/ptero.se)
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/ptero.se)
         ;;
     3)
         echo -e "${GREEN}Installing Panel + Wings...${RESET}"
