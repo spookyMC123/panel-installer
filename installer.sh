@@ -27,10 +27,11 @@ echo -e "${YELLOW}Select an option:${RESET}"
 echo "1) Install pterodactyl (panel +wings with ip on vps or VM)"
 echo "2) Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
 echo "3) Install Skyport-panel(panel + wings ubuntu/debian)"
-echo "4) Install draco-v1"
-echo "5) coming!"
+echo "4) Install draco panel's"
+echo "5) Install puffer (all in one github codespce and vps)"
 echo "6) "
-echo "7) puffer panel install (free vps github only)"
+echo "7) install dashboad"
+echo "8) install Deamon (for 3,4,6,7 when Deamon not installed)
 echo "more panel are coming soon!!"
 echo -n "Enter your choice: "
 read -r choice
@@ -55,8 +56,8 @@ case $choice in
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     5)
-        echo -e "${GREEN}Installing draco v2...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        echo -e "${GREEN}Installing Pufferpanel...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/blob/main/script/puffer%20panel/installpuffer.sh)
         ;;
     6)
         echo -e "${GREEN}Installing draco v3...${RESET}"
@@ -66,6 +67,7 @@ case $choice in
         echo -e "${GREEN}Installing Puffer panel...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
+
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
         exit 1
