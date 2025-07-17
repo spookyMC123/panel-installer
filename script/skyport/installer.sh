@@ -21,6 +21,7 @@ echo "1) Install Panel"
 echo "2) Install Wings"
 echo "3) Install Panel + Wings"
 echo "4) Install Node.js"
+echo "0) back to Panel-Installer"
 echo -n "Enter your choice: "
 read -r choice
 
@@ -42,6 +43,10 @@ case $choice in
     4)
         echo -e "${GREEN}Installing Node.js...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
+        ;;
+    0)
+        echo -e "${GREEN}backing to panel-installer...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
         ;;
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
