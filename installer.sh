@@ -31,8 +31,8 @@ echo "4) Install draco panel's"
 echo "5) Install puffer (all in one github codespce and vps)"
 echo "6) "
 echo "7) install dashboad"
-echo "8) install Deamon (for 3,4,6,7 when Deamon not installed)
-echo "more panel are coming soon!!"
+echo "8) install Deamon (for 3,4,6,7 when Deamon not installed)"
+echo "more panel are coming soon"
 echo -n "Enter your choice: "
 read -r choice
 
