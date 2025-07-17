@@ -57,7 +57,7 @@ case $choice in
         ;;
     5)
         echo -e "${GREEN}Installing Pufferpanel...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/blob/main/script/puffer%20panel/installpuffer.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
         ;;
     6)
         echo -e "${GREEN}Installing draco v3...${RESET}"
