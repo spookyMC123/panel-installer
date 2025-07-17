@@ -11,9 +11,9 @@ RESET="\e[0m"
 clear
 
 # Display Installer Name
-echo -e "${CYAN}==============================${RESET}"
-echo -e "${CYAN}      Skyport-Installer       ${RESET}"
-echo -e "${CYAN}==============================${RESET}"
+echo -e "${GREEN}==============================${RESET}"
+echo -e "${GREEN}         puffer-panel         ${RESET}"
+echo -e "${GREEN}==============================${RESET}"
 
 # Menu options
 echo -e "${YELLOW}Select an option:${RESET}"
