@@ -24,14 +24,17 @@ echo -e "${CYAN}==============================${RESET}"
 
 # Menu options
 echo -e "${YELLOW}Select an option:${RESET}"
-echo "1) Install pterodactyl (panel +wings with ip on vps or VM)"
-echo "2) Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
-echo "3) Install Skyport-panel(panel + wings ubuntu/debian)"
-echo "4) Install draco panel's"
-echo "5) Install puffer (all in one github codespce and vps)"
-echo "6) "
-echo "7) install dashboad"
-echo "8) install Deamon (for 3,4,6,7 when Deamon not installed)"
+echo -e "${GREEN}---------------------Install-Panel-------------------------${RESET} "
+echo -e "${GREEN}1)${RESET} Install pterodactyl (panel +wings with ip on vps or VM)"
+echo -e "${GREEN}2)${RESET} Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
+echo -e "${GREEN}3)${RESET} Install Skyport-panel(panel + wings ubuntu/debian)"
+echo -e "${GREEN}4)${RESET} Install draco panel's"
+echo -e "${GREEN}5)${RESET} Install puffer (all in one github codespce and vps)"
+echo -e "${GREEN}6)${RESET} Install PowerPort panel"
+echo -e "${GREEN}--------------------Install-DashBoad-----------------------${RESET} "
+echo -e "${GREEN}7)${RESET} install dashboad"
+echo -e "${GREEN}--------------------Install-Deamon-------------------------${RESET} "
+echo -e "${GREEN}8)${RESET} install Deamon (for 3,4,6,7 when Deamon not installed)"
 echo "more panel are coming soon"
 echo -n "Enter your choice: "
 read -r choice
@@ -52,7 +55,7 @@ case $choice in
         bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
         ;;
     4)
-        echo -e "${GREEN}Installing draro v1...${RESET}"
+        echo -e "${GREEN}Installing draro panel's...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     5)
@@ -60,7 +63,7 @@ case $choice in
         bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
         ;;
     6)
-        echo -e "${GREEN}Installing draco v3...${RESET}"
+        echo -e "${GREEN}Installing Powerport panel...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     7)
