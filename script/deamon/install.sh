@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Define colors
+BG_BLACK="\e[40m"
+BG_RED="\e[41m"
+BG_GREEN="\e[42m"
+BG_YELLOW="\e[43m"
+BG_BLUE="\e[44m"
+BG_MAGENTA="\e[45m"
+BG_CYAN="\e[46m"
+BG_WHITE="\e[47m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+CYAN="\e[36m"
+RED="\e[31m"
+RESET="\e[0m" # Reset all styles
+
 echo -e "${CYAN}Deamon Starting the installation process...${RESET}"
 
 # Install Docker
@@ -25,11 +40,11 @@ cd Vortex-Deamon
 echo -e "${YELLOW}Installing npm dependencies...${RESET}"
 npm install
 
-echo "====================== Manual Instructions ======================"
-echo "1. Configure token:"
-echo "   Visit: https://Vortex-panel.com/admin/node"
-echo "   And paste the token in Terminal"
+echo -e "${RED}====================== Manual Instructions ======================${RESET}"
+echo -e "${BG_BLUE}1. Configure token:${RESET}"
+echo -e "${BG_BLUE}   Visit: https://Vortex-panel.com/admin/node${RESET}"
+echo -e "${BG_BLUE}   And paste the token in Terminal${RESET}"
 echo ""
-echo "2. Then Start the Daemon:"
-echo "   node ."
-echo "================================================================="
+echo -e "${BG_BLUE}2. Then Start the Daemon:${RESET}"
+echo -e "${BG_BLUE}   node .${RESET}"
+echo -e "${RED}=================================================================${RESET}"
