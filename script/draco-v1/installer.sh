@@ -32,16 +32,16 @@ case $choice in
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/script/v1-installwe.sh)
         ;;
     2)
-        echo -e "${GREEN}Installing draco-v3...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
+        echo -e "${GREEN}Installing draco-v2...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/script/v2installwe.sh)
         ;;
     3)
         echo -e "${GREEN}Installing draco-v3...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/script/v1-installwe.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/script/v3-installwe.sh)
         ;;
     4)
         echo -e "${GREEN}Installing PRO-wings...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
         ;;
     0)
         echo -e "${GREEN}backing to panel-installer...${RESET}"
