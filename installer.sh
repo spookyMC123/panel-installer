@@ -1,11 +1,39 @@
 #!/bin/bash
 
 # Define colors
+BG_BLACK="\e[40m"
+BG_RED="\e[41m"
+BG_GREEN="\e[42m"
+BG_YELLOW="\e[43m"
+BG_BLUE="\e[44m"
+BG_MAGENTA="\e[45m"
+BG_CYAN="\e[46m"
+BG_WHITE="\e[47m"
+
+
+BRIGHT_BLACK="\e[90m"
+BRIGHT_RED="\e[91m"
+BRIGHT_GREEN="\e[92m"
+BRIGHT_YELLOW="\e[93m"
+BRIGHT_BLUE="\e[94m"
+BRIGHT_MAGENTA="\e[95m"
+BRIGHT_CYAN="\e[96m"
+BRIGHT_WHITE="\e[97m"
+
 GREEN="\e[32m"
 YELLOW="\e[33m"
 CYAN="\e[36m"
 RED="\e[31m"
-RESET="\e[0m"
+RESET="\e[0m" # Reset all styles
+#style
+BOLD="\e[1m"
+DIM="\e[2m"
+UNDERLINE="\e[4m"
+BLINK="\e[5m"
+REVERSE="\e[7m"
+HIDDEN="\e[8m" 
+
+
 
 # Check if the script is run as root
 if [ "$EUID" -ne 0 ]; then
@@ -26,11 +54,11 @@ echo -e "${CYAN}==============================${RESET}"
 echo -e "${YELLOW}Select an option:${RESET}"
 echo -e "${GREEN}---------------------Install-Panel-------------------------${RESET} "
 echo -e "${GREEN}1)${RESET} Install pterodactyl (panel +wings with ip on vps or VM)"
-echo -e "${GREEN}2)${RESET} Install pterodactyl 2 (only panel free vps without paid vm ubuntu/debian)"
-echo -e "${GREEN}3)${RESET} Install Skyport-panel(panel + wings ubuntu/debian)"
-echo -e "${GREEN}4)${RESET} Install draco panel's"
-echo -e "${GREEN}5)${RESET} Install puffer (all in one github codespce and vps)"
-echo -e "${GREEN}6)${RESET} Install PowerPort panel"
+echo -e "${GREEN}2)${RESET} Install Skyport-panel(panel + wings ubuntu/debian)"
+echo -e "${GREEN}3)${RESET} Install draco panel's"
+echo -e "${GREEN}4)${RESET} Install puffer (all in one github codespce and vps)"
+echo -e "${GREEN}5)${RESET} Install PowerPort panel"
+echo -e "${GREEN}6)${RESET} More panel commin"
 echo -e "${GREEN}--------------------Install-DashBoad-----------------------${RESET} "
 echo -e "${GREEN}7)${RESET} install dashboad"
 echo -e "${GREEN}--------------------Install-Deamon-------------------------${RESET} "
@@ -43,33 +71,41 @@ read -r choice
 case $choice in
     1)
         echo -e "${GREEN}Installing pterodactyl...${RESET}"
-        bash <(curl -s https://pterodactyl-installer.se)
+        bash <(curl -fsSl https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/ptrodactyl/install.sh)
         ;;
     2)
-        echo -e "${GREEN}Installing pterodactyl 2...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/ptero.se)
+        echo -e "${GREEN}Installing SkyPort...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
         ;;
     3)
-        echo -e "${GREEN}Installing Panel + Wings...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
+        echo -e "${GREEN}Installing draro panel's...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/installer.sh)
         ;;
     4)
-        echo -e "${GREEN}Installing draro panel's...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
-        ;;
-    5)
         echo -e "${GREEN}Installing Pufferpanel...${RESET}"
         bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
         ;;
+    5)
+        echo -e "${GREEN}Installing powerport panel...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/powerport/install.sh)
+        ;;
     6)
-        echo -e "${GREEN}Installing Powerport panel...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        echo -e "${GREEN}Sorry more panel is comming!${RESET}"
+        echo -e "${BLINK}----------------------------${RESET}"
+        echo -e "${BG_MAGENTA}Waiting for 5 seconds to back installer...${RESET}"
+        sleep 5
+        echo "Done waiting! backing to installer"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
         ;;
     7)
-        echo -e "${GREEN}Installing Puffer panel...${RESET}"
+        echo -e "${GREEN}Installing Dashboad...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
         ;;
+    8)
+        echo -e "${GREEN}Installing Deamon...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
+        ;;
+
 
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
