@@ -12,15 +12,15 @@ clear
 
 # Display Installer Name
 echo -e "${CYAN}==============================${RESET}"
-echo -e "${CYAN}      Dracro-v1-Installer     ${RESET}"
+echo -e "${CYAN}      Dracro-Installer     ${RESET}"
 echo -e "${CYAN}==============================${RESET}"
 
 # Menu options
 echo -e "${YELLOW}Select an option:${RESET}"
-echo "1) Install Panel"
-echo "2) Install Wings"
-echo "3) Install Panel + Wings"
-echo "4) Install Node.js"
+echo "1) Install Panelv1"
+echo "2) Install panelv2"
+echo "3) Install panelv3"
+echo "4) Install pro-wings"
 echo "0) back to Panel-installer"
 echo -n "Enter your choice: "
 read -r choice
@@ -32,16 +32,15 @@ case $choice in
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/script/v1-installwe.sh)
         ;;
     2)
-        echo -e "${GREEN}Installing Wings...${RESET}"
+        echo -e "${GREEN}Installing draco-v3...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
         ;;
     3)
-        echo -e "${GREEN}Installing Panel + Wings...${RESET}"
+        echo -e "${GREEN}Installing draco-v3...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/script/v1-installwe.sh)
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
         ;;
     4)
-        echo -e "${GREEN}Installing Node.js...${RESET}"
+        echo -e "${GREEN}Installing PRO-wings...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
         ;;
     0)
