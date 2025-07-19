@@ -92,18 +92,14 @@ case $choice in
     6)
         echo -e "${GREEN}Sorry more panel is comming!${RESET}"
         echo -e "${BLINK}----------------------------${RESET}"
-        echo -e "${BG_MAGENTA}Waiting for 5 seconds to back installer...${RESET}"
-        sleep 5
-        echo "Done waiting! backing to installer"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
         ;;
     7)
         echo -e "${GREEN}Installing Dashboad...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/refs/heads/main/script/draco-v1/installer.sh)
+        bash <(curl -fsSL )
         ;;
     8)
         echo -e "${GREEN}Installing Deamon...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
+        bash <(curl -fsSLhttps://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
         ;;
 
 
