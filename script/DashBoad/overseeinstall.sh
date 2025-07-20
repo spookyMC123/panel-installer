@@ -20,4 +20,6 @@ echo -e "${YELLOW}Cloning the Oversee repository...${RESET}"
 git clone git clone https://github.com/draco-labes/oversee-fixed.git
 
 # Change to the Oversee directory
-cd oversee-fixed && npm install && npm run seed && npm run createUser && node .
+cd oversee-fixed
+npm install && npm run seed && npm run createUser && node .
+
