@@ -31,7 +31,7 @@ case $choice in
         ;;
     2)
         echo -e "${GREEN}Installing Draco dash...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/dracodash/installer.sh)
         ;;
      0)
         echo -e "${GREEN}Backing...${RESET}"
