@@ -43,5 +43,3 @@ case $choice in
         exit 1
         ;;
 esac
-
-echo -e "${GREEN}DashBoad process completed successfully!${RESET}"
