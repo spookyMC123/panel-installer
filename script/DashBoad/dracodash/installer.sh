@@ -17,9 +17,9 @@ echo -e "${CYAN}==============================${RESET}"
 
 # Menu options
 echo -e "${YELLOW}Select an option:${RESET}"
-echo "1) Install draco-dashboard"
+echo "1) Install Ddash (a better version of draco dashbaord with ultimate features)"
 echo "2) Install dashboard-v1.0.0"
-echo "3) install dash-v2"
+echo "3) install draco-dashboard"
 echo "0) back to panel-installer"
 echo -n "Enter your choice: "
 read -r choice
@@ -28,15 +28,15 @@ read -r choice
 case $choice in
     1)
         echo -e "${GREEN}Installing Draco dash...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/overseeinstall.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/dracodash/scrit/betterdash.sh)
         ;;
     2)
         echo -e "${GREEN}Installing Dash v1...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/dracodash/scrit/dash-v1.sh)
         ;;
     3)
-        echo -e "${GREEN}Installing Dash v2...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/scripts/node.sh)
+        echo -e "${GREEN}Installing draco-dashboard...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/dracodash/scrit/Dracro-dash.sh)
         ;;
      0)
         echo -e "${GREEN}Backing...${RESET}"
