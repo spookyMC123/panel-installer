@@ -38,6 +38,17 @@ case $choice in
     3)
         echo -e "${GREEN}Installing Panel + Wings...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/panel.sh)
+
+        read -p "Are you sure you want to install? (yes/no): " answer
+
+        if [[ "$answer" == "yes" ]]; then
+        echo "Starting installation..."
+        # Your install commands here
+        else
+        echo "Installation cancelled."
+        exit 1
+fi
+
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/Skyport-installer/refs/heads/main/scripts/node.sh)
         ;;
     4)
