@@ -7,7 +7,7 @@ CYAN="\e[36m"
 RED="\e[31m"
 RESET="\e[0m"
 
-# Ensure apt is updated
+# Update apt
 sudo apt update -y
 
 # Start installation
