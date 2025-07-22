@@ -92,7 +92,7 @@ case $choice in
     6)
         echo -e "${GREEN}Sorry more panel is comming!${RESET}"
         echo -e "${BG_MAGENTA}----------------------------${RESET}"
-        echo -e "${RED}backing-in-5-sec${RESET}
+        echo -e "${RED}backing-in-5-sec${RESET}"
         sleep 5
         bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
         ;;
