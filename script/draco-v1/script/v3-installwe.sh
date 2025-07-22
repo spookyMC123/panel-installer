@@ -34,3 +34,4 @@ npm run createUser
 node .
 
 echo -e "${GREEN}✅ Dracrovpanel v3 installation complete!${RESET}"
+echo -e "${GREEN}✅ Dracrovpanel v3 run at 3000 port!${RESET}"
