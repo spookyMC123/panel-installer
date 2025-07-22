@@ -7,10 +7,12 @@ CYAN="\e[36m"
 RED="\e[31m"
 RESET="\e[0m"
 
+# Ensure apt is updated
+sudo apt update -y
 
 # Start installation
 echo -e "${CYAN}Installing Node.js 20...${RESET}"
-curl -sL https://deb.nodesource.com/setup_20.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Clone the panel repository
@@ -31,4 +33,4 @@ npm run seed
 npm run createUser
 node .
 
-echo -e "${GREEN}✅ Panel installation complete!${RESET}"
+echo -e "${GREEN}✅ Dracrovpanel v3 installation complete!${RESET}"
