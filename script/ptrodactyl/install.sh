@@ -20,18 +20,23 @@ echo -e "${CYAN}==============================${RESET}"
 echo -e "${YELLOW}Select an option:${RESET}"
 echo -e "${BG_BLUE}1)${RESET} Install Pterodactyl (IPv4 + Wings)"
 echo -e "${BG_BLUE}2)${RESET} Install Pterodactyl 2 (GitHub version, no IPv4)"
+echo -e "${BG_BLUE}0)${RESET} Backing"
 echo -ne "${YELLOW}Enter your choice: ${RESET}"
 read -r choice
 
 # Run the selected installation script
 case $choice in
     1)
-        echo -e "${GREEN}Installing Pterodactyl Panel...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/master/install.sh)
+        echo -e "${GREEN}Installing Pterodactyl Panel (Panel + Wings)...${RESET}"
+        bash <(curl -s https://pterodactyl-installer.se/)
         ;;
     2)
         echo -e "${GREEN}Installing Pterodactyl Panel 2...${RESET}"
         bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/main/ptero.se)
+        ;;
+    0)
+        echo -e "${GREEN}Backing...${RESET}"
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
         ;;
     *)
         echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
