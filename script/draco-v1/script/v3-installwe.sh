@@ -7,11 +7,6 @@ CYAN="\e[36m"
 RED="\e[31m"
 RESET="\e[0m"
 
-# Ensure script is run as root
-if [ "$EUID" -ne 0 ]; then
-  echo -e "${RED}Please run this script as root.${RESET}"
-  exit 1
-fi
 
 # Start installation
 echo -e "${CYAN}Installing Node.js 20...${RESET}"
