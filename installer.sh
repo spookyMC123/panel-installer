@@ -91,7 +91,7 @@ case $choice in
         ;;
     6)
         echo -e "${GREEN}Sorry more panel is comming!${RESET}"
-        echo -e "${BLINK}----------------------------${RESET}"
+        echo -e "${BG_MAGENTA}----------------------------${RESET}"
         backing-in-5-sec
         sleep 5
         bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
@@ -102,7 +102,7 @@ case $choice in
         ;;
     8)
         echo -e "${GREEN}Installing Deamon...${RESET}"
-        bash <(curl -fsSLhttps://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
+        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
         ;;
 
 
@@ -112,4 +112,4 @@ case $choice in
         ;;
 esac
 
-echo -e "${GREEN}Skyport-Installer process completed successfully!${RESET}"
+echo -e "${GREEN}panel-Installer process completed successfully!${RESET}"
