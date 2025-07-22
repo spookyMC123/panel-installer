@@ -47,7 +47,7 @@ clear
 # Display Installer Name
 echo -e "${CYAN}==============================${RESET}"
 echo -e "${CYAN}        panel-Installer       ${RESET}"
-echo -e "${CYAN}  BY joy and N!GHT .EXE.</>   ${RESET}"
+echo -e "${CYAN}     BY joy/N!GHT .EXE.</>    ${RESET}"
 echo -e "${CYAN}==============================${RESET}"
 
 # Menu options
@@ -71,7 +71,7 @@ read -r choice
 case $choice in
     1)
         echo -e "${GREEN}Installing pterodactyl...${RESET}"
-        bash <(curl -fsSl https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/ptrodactyl/install.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/main/script/ptrodactyl/install.sh)
         ;;
     2)
         echo -e "${GREEN}Installing SkyPort...${RESET}"
