@@ -1,22 +1,13 @@
 #!/bin/bash
 
-# Define colors
-BG_BLACK="\e[40m"
-BG_RED="\e[41m"
-BG_GREEN="\e[42m"
-BG_YELLOW="\e[43m"
-BG_BLUE="\e[44m"
+# Define colors and styles
 BG_MAGENTA="\e[45m"
+BG_BLUE="\e[44m"
 BG_CYAN="\e[46m"
-BG_WHITE="\e[47m"
+BG_GRAY="\e[100m"
 
-
-BRIGHT_BLACK="\e[90m"
-BRIGHT_RED="\e[91m"
 BRIGHT_GREEN="\e[92m"
 BRIGHT_YELLOW="\e[93m"
-BRIGHT_BLUE="\e[94m"
-BRIGHT_MAGENTA="\e[95m"
 BRIGHT_CYAN="\e[96m"
 BRIGHT_WHITE="\e[97m"
 
@@ -24,92 +15,101 @@ GREEN="\e[32m"
 YELLOW="\e[33m"
 CYAN="\e[36m"
 RED="\e[31m"
-RESET="\e[0m" # Reset all styles
-#style
+GRAY="\e[90m"
+RESET="\e[0m"
+
 BOLD="\e[1m"
-DIM="\e[2m"
 UNDERLINE="\e[4m"
-BLINK="\e[5m"
-REVERSE="\e[7m"
-HIDDEN="\e[8m" 
 
+# Emojis
+EMOJI_ROCKET="🚀"
+EMOJI_GEAR="⚙️"
+EMOJI_CHECK="✅"
+EMOJI_WARNING="⚠️"
+EMOJI_FIRE="🔥"
+EMOJI_PANEL="🧩"
+EMOJI_COMING="⏳"
+EMOJI_DASH="📊"
+EMOJI_DAEMON="🛠️"
+EMOJI_RETRY="🔁"
 
-
-# Check if the script is run as root
+# Check if script is run as root
 if [ "$EUID" -ne 0 ]; then
-  echo -e "${RED}Please run this script as root.${NC}"
+  echo -e "${RED}${BOLD}${EMOJI_WARNING} Error: Please run this script as root!${RESET}"
   exit 1
 fi
 
-# Clear the terminal
+# Clear screen
 clear
 
-# Display Installer Name
-echo -e "${CYAN}==============================${RESET}"
-echo -e "${CYAN}        panel-Installer       ${RESET}"
-echo -e "${CYAN}     BY joy/N!GHT .EXE.</>    ${RESET}"
-echo -e "${CYAN}==============================${RESET}"
+# Installer Header
+echo -e "${CYAN}${BOLD}"
+echo -e "╔══════════════════════════════════════════════════╗"
+echo -e "║          ${EMOJI_ROCKET} Panel Installer by Joy/N!GHT .EXE </>         ║"
+echo -e "╚══════════════════════════════════════════════════╝"
+echo -e "${RESET}"
 
-# Menu options
-echo -e "${YELLOW}Select an option:${RESET}"
-echo -e "${GREEN}---------------------Install-Panel-------------------------${RESET} "
-echo -e "${GREEN}1)${RESET} Install pterodactyl (panel +wings with ip on vps or VM)"
-echo -e "${GREEN}2)${RESET} Install Skyport-panel(panel + wings ubuntu/debian)"
-echo -e "${GREEN}3)${RESET} Install draco panel's"
-echo -e "${GREEN}4)${RESET} Install puffer (all in one github codespce and vps)"
-echo -e "${GREEN}5)${RESET} Install PowerPort panel"
-echo -e "${GREEN}6)${RESET} More panel commin"
-echo -e "${GREEN}--------------------Install-DashBoad-----------------------${RESET} "
-echo -e "${GREEN}7)${RESET} install dashboad"
-echo -e "${GREEN}--------------------Install-Deamon-------------------------${RESET} "
-echo -e "${GREEN}8)${RESET} install Deamon (for 3,4,6,7 when Deamon not installed)"
-echo "more panel are coming soon"
-echo -n "Enter your choice: "
+# Menu
+echo -e "${YELLOW}${BOLD}📦 Select an option below to install:${RESET}"
+echo -e "${BRIGHT_CYAN}━━━━━━━━━━━━━━━━ ${EMOJI_PANEL} Install Panels ${EMOJI_PANEL} ━━━━━━━━━━━━━━━━${RESET}"
+echo -e "${GREEN} 1)${RESET} ${BOLD}Pterodactyl Panel${RESET}          ${GRAY}${EMOJI_FIRE}  VPS/VM Full Installer"
+echo -e "${GREEN} 2)${RESET} ${BOLD}Skyport Panel${RESET}              ${GRAY}${EMOJI_ROCKET}  Lightweight & Fast"
+echo -e "${GREEN} 3)${RESET} ${BOLD}Draco Panel${RESET}                ${GRAY}${EMOJI_GEAR}  Advanced Custom Panel"
+echo -e "${GREEN} 4)${RESET} ${BOLD}Pufferpanel${RESET}                ${GRAY}${EMOJI_ROCKET}  VPS or Codespace Ready"
+echo -e "${GREEN} 5)${RESET} ${BOLD}PowerPort Panel${RESET}            ${GRAY}${EMOJI_GEAR}  Fast Setup Panel"
+echo -e "${GREEN} 6)${RESET} ${BOLD}Coming Soon...${RESET}              ${GRAY}${EMOJI_COMING}  Stay Tuned!"
+
+echo -e "${BRIGHT_CYAN}━━━━━━━━━━━━━━━ ${EMOJI_DASH} Install Dashboards ${EMOJI_DASH} ━━━━━━━━━━━━━━━${RESET}"
+echo -e "${GREEN} 7)${RESET} ${BOLD}Dashboard UI${RESET}               ${GRAY}${EMOJI_DASH}  Modern Web View"
+
+echo -e "${BRIGHT_CYAN}━━━━━━━━━━━━━━━ ${EMOJI_DAEMON} Install Daemon ${EMOJI_DAEMON} ━━━━━━━━━━━━━━━━${RESET}"
+echo -e "${GREEN} 8)${RESET} ${BOLD}Daemon Installer${RESET}           ${GRAY}${EMOJI_DAEMON}  Required for panels"
+
+# Prompt input
+echo -ne "\n${BOLD}${CYAN}👉 Enter your choice [1-8]: ${RESET}"
 read -r choice
 
-# Run the selected installation script
+# Process choice
 case $choice in
-    1)
-        echo -e "${GREEN}Installing pterodactyl...${RESET}"
-        bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/main/script/ptrodactyl/install.sh)
-        ;;
-    2)
-        echo -e "${GREEN}Installing SkyPort...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
-        ;;
-    3)
-        echo -e "${GREEN}Installing draro panel's...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/installer.sh)
-        ;;
-    4)
-        echo -e "${GREEN}Installing Pufferpanel...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
-        ;;
-    5)
-        echo -e "${GREEN}Installing powerport panel...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/powerport/install.sh)
-        ;;
-    6)
-        echo -e "${GREEN}Sorry more panel is comming!${RESET}"
-        echo -e "${BG_MAGENTA}----------------------------${RESET}"
-        echo -e "${RED}backing-in-5-sec${RESET}"
-        sleep 5
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
-        ;;
-    7)
-        echo -e "${GREEN}Installing Dashboad...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/install.sh)
-        ;;
-    8)
-        echo -e "${GREEN}Installing Deamon...${RESET}"
-        bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
-        ;;
-
-
-    *)
-        echo -e "${RED}Invalid choice! Please run the script again.${RESET}"
-        exit 1
-        ;;
+  1)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Pterodactyl Panel...${RESET}"
+    bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/main/script/ptrodactyl/install.sh)
+    ;;
+  2)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing SkyPort Panel...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
+    ;;
+  3)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Draco Panel...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/installer.sh)
+    ;;
+  4)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Pufferpanel...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
+    ;;
+  5)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing PowerPort Panel...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/powerport/install.sh)
+    ;;
+  6)
+    echo -e "${BRIGHT_YELLOW}${EMOJI_COMING} More panels are in development!${RESET}"
+    echo -e "${BG_MAGENTA}${BOLD} 🔁 Returning to main menu in 5 seconds... ${RESET}"
+    sleep 5
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/installer.sh)
+    ;;
+  7)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Dashboard UI...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/install.sh)
+    ;;
+  8)
+    echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Daemon...${RESET}"
+    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
+    ;;
+  *)
+    echo -e "${RED}${BOLD}${EMOJI_WARNING} Invalid input! Please rerun and enter a number 1-8.${RESET}"
+    exit 1
+    ;;
 esac
 
-echo -e "${GREEN}panel-Installer process completed successfully!${RESET}"
+# Completion message
+echo -e "\n${BRIGHT_GREEN}${BOLD}${EMOJI_CHECK} Installation Completed Successfully! Enjoy your panel. 🚀${RESET}"
