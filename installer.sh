@@ -73,23 +73,23 @@ read -r choice
 case $choice in
   1)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Pterodactyl Panel...${RESET}"
-    bash <(curl -fsSL https://raw.githubusercontent.com/spookyMC123/panel-installer/main/script/ptrodactyl/install.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/script/draco-v1/installer.sh)
     ;;
   2)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing SkyPort Panel...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/skyport/installer.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/script/skyport/installer.sh)
     ;;
   3)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Draco Panel...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/draco-v1/installer.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/script/draco-v1/installer.sh)
     ;;
   4)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Pufferpanel...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/script/puffer%20panel/installpuffer.sh)
     ;;
   5)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing PowerPort Panel...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/powerport/install.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/script/powerport/install.sh)
     ;;
   6)
     echo -e "${BRIGHT_YELLOW}${EMOJI_COMING} More panels are in development!${RESET}"
@@ -99,11 +99,11 @@ case $choice in
     ;;
   7)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Dashboard UI...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/DashBoad/install.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/DashBoad/install.sh)
     ;;
   8)
     echo -e "${BRIGHT_GREEN}${EMOJI_CHECK} Installing Daemon...${RESET}"
-    bash <(curl -fsSL https://github.com/spookyMC123/panel-installer/raw/refs/heads/main/script/deamon/install.sh)
+    bash <(curl -fsSL https://github.com/spookyMC123/skipt/raw/refs/heads/main/deamon/install.sh)
     ;;
   *)
     echo -e "${RED}${BOLD}${EMOJI_WARNING} Invalid input! Please rerun and enter a number 1-8.${RESET}"
